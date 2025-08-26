@@ -1,5 +1,5 @@
 import express, { json } from 'express';
-import { ENV_CONFIG } from './presentation/config';
+import { ENV_CONFIG } from './config';
 import { mainRouter } from './router';
 
 const app = express();
