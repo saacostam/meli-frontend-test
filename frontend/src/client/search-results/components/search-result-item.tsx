@@ -19,7 +19,7 @@ export function SearchResultItem({ item }: SearchResultItemProps) {
         })}
       >
         <img src={item.picture} alt={item.title} width={200} height={200} />
-        <div className="flex-1">
+        <div className="flex-1 space-y-2">
           <div className="flex flex-wrap justify-between gap-2">
             <span className="text-2xl flex leading-7">
               $ {item.price.amount}{" "}

@@ -7,7 +7,7 @@ import { SearchBar } from "@/client/search-bar";
 export function AppShell({ children }: PropsWithChildren) {
   return (
     <>
-      <div className="bg-primary p-2">
+      <div className="bg-primary py-2 px-4">
         <div className="flex max-w-5xl mx-auto gap-6 items-center">
           <Link href={genRoute({ type: RouteType.SEARCH })}>
             <Logo width="48" />
@@ -15,7 +15,7 @@ export function AppShell({ children }: PropsWithChildren) {
           <SearchBar className="flex-1" />
         </div>
       </div>
-      <div className="max-w-5xl mx-auto mt-4 mb-8">{children}</div>
+      <div className="max-w-5xl mx-auto mt-4 mb-8 px-4">{children}</div>
     </>
   );
 }
