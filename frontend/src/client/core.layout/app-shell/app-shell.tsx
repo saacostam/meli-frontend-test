@@ -15,7 +15,9 @@ export function AppShell({ children }: PropsWithChildren) {
           <SearchBar className="flex-1" />
         </div>
       </div>
-      <div className="max-w-5xl mx-auto mt-4 mb-8 px-4">{children}</div>
+      <div className="px-4">
+        <div className="max-w-5xl mx-auto mt-4 mb-8">{children}</div>
+      </div>
     </>
   );
 }
