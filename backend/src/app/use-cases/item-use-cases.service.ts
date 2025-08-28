@@ -1,6 +1,11 @@
 import { BaseDomainError, DomainErrorType } from "../../domain/errors";
-import type { GetItemByIdAppRequestDto, GetItemsBySearchQueryAppRequestDto, GetItemsBySearchQueryAppResponseDto } from "../dtos";
+import type { GetItemByIdAppRequestDto, GetItemByIdAppResponseDto, GetItemsBySearchQueryAppRequestDto, GetItemsBySearchQueryAppResponseDto } from "../dtos";
 import type { IItemRepository } from "../repositories";
+
+const AUTHOR = {
+  name: "Santiago",
+  lastname: "Acosta Meza",
+};
 
 export class ItemsUseCasesService {
   constructor(
@@ -17,16 +22,13 @@ export class ItemsUseCasesService {
     ]);
 
     return {
-      author: {
-        name: "Santiago",
-        lastname: "Acosta Meza",
-      },
+      author: AUTHOR,
       categories,
       items,
     }
   }
 
-  async getItemById({ itemId }: GetItemByIdAppRequestDto) {
+  async getItemById({ itemId }: GetItemByIdAppRequestDto): Promise<GetItemByIdAppResponseDto> {
     const item = await this.itemRepository.getById(itemId);
 
     if (!item) throw new BaseDomainError(
@@ -34,6 +36,9 @@ export class ItemsUseCasesService {
       `Couldn't find item with id ${itemId}`,
     )
 
-    return item;
+    return {
+      author: AUTHOR,
+      item,
+    };
   }
 }

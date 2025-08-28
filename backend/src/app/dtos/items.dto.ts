@@ -16,3 +16,11 @@ export interface GetItemsBySearchQueryAppResponseDto {
 export interface GetItemByIdAppRequestDto {
   itemId: string;
 }
+
+export interface GetItemByIdAppResponseDto {
+  author: {
+    name: string;
+    lastname: string;
+  }
+  item: Item;
+}

@@ -17,6 +17,8 @@ export class MeliItemRepository implements IItemRepository {
         "test",
         "test",
         false,
+        10,
+        "test-description",
       )
     ]
   }
@@ -33,6 +35,8 @@ export class MeliItemRepository implements IItemRepository {
       "test",
       "test",
       false,
+      10,
+      "test-description",
     )
   }
 
