@@ -3,11 +3,13 @@ export enum RouteType {
   SEARCH_RESULT = "search-result",
 }
 
-export type RouteAction = {
-  type: RouteType.SEARCH,
-} | {
-  type: RouteType.SEARCH_RESULT,
-  payload: {
-    search: string;
-  }
-}
+export type RouteAction =
+  | {
+      type: RouteType.SEARCH;
+    }
+  | {
+      type: RouteType.SEARCH_RESULT;
+      payload: {
+        search: string;
+      };
+    };
