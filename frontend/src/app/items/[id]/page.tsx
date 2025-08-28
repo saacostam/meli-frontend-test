@@ -3,6 +3,7 @@ import { getItemById } from "@/server/fetching";
 import NextJsError from "next/error";
 import { ItemByIdView } from "@/client/item-by-id";
 import { notFound } from "next/navigation";
+import { genRoute, RouteType } from "@/client/router";
 
 export const metadata: Metadata = {
   title: "Mercado Libre | Search",
@@ -19,9 +20,18 @@ export default async function Page({ params }: Props) {
 
   if (!id) return notFound();
 
-  const { item } = await getItemById({
+  const { categories, item } = await getItemById({
     id,
   });
 
-  return <ItemByIdView item={item} />;
+  return (
+    <ItemByIdView
+      item={item}
+      breadCrumbs={categories.map((category, index, ar) => ({
+        label: category,
+        href:
+          index < ar.length - 1 ? genRoute({ type: RouteType.SEARCH }) : null,
+      }))}
+    />
+  );
 }

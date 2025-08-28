@@ -29,7 +29,10 @@ export class ItemsUseCasesService {
   }
 
   async getItemById({ itemId }: GetItemByIdAppRequestDto): Promise<GetItemByIdAppResponseDto> {
-    const item = await this.itemRepository.getById(itemId);
+    const [categories, item] = await Promise.all([
+      this.itemRepository.getCategories(),
+      this.itemRepository.getById(itemId)
+    ]);
 
     if (!item) throw new BaseDomainError(
       DomainErrorType.NOT_FOUND,
@@ -38,6 +41,7 @@ export class ItemsUseCasesService {
 
     return {
       author: AUTHOR,
+      categories,
       item,
     };
   }

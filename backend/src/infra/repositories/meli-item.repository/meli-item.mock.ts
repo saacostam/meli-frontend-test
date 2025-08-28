@@ -1,26 +1,8 @@
 import { Item } from "../../../domain/entities";
 
 export const CATEGORIES: string[] = [
+  "Tecnología",
   "Electrónica",
-  "Celulares y Smartphones",
-  "Computación",
-  "Televisores y Video",
-  "Consolas y Videojuegos",
-  "Audio",
-  "Cámaras y Fotografía",
-  "Electrodomésticos",
-  "Hogar y Muebles",
-  "Decoración",
-  "Cocina",
-  "Herramientas y Construcción",
-  "Deportes y Fitness",
-  "Ropa, Zapatos y Accesorios",
-  "Juguetes y Bebés",
-  "Salud y Belleza",
-  "Libros, Música y Películas",
-  "Autos y Motocicletas",
-  "Mascotas",
-  "Instrumentos Musicales",
 ];
 
 export const ITEMS: Item[] = [

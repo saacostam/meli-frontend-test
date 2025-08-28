@@ -22,5 +22,6 @@ export interface GetItemByIdAppResponseDto {
     name: string;
     lastname: string;
   }
+  categories: string[];
   item: Item;
 }

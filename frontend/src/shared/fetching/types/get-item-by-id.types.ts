@@ -10,4 +10,5 @@ export interface GetItemByIdResponse {
     lastname: string;
   };
   item: Item;
+  categories: string[];
 }
