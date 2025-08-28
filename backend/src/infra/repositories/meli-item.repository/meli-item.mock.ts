@@ -33,6 +33,7 @@ export const ITEMS: Item[] = [
     true,
     120,
     "Auriculares inalámbricos de alta calidad con cancelación de ruido.",
+    "Medellín",
   ),
   new Item(
     "2",
@@ -43,6 +44,7 @@ export const ITEMS: Item[] = [
     false,
     45,
     "Mouse ergonómico para gaming con iluminación RGB personalizable.",
+    "Cali",
   ),
   new Item(
     "3",
@@ -53,6 +55,7 @@ export const ITEMS: Item[] = [
     true,
     75,
     "Teclado mecánico duradero con interruptores táctiles.",
+    "Cali",
   ),
   new Item(
     "4",
@@ -63,6 +66,7 @@ export const ITEMS: Item[] = [
     true,
     200,
     "Reloj inteligente con muchas funciones, monitor de ritmo cardíaco y GPS.",
+    "Medellín",
   ),
   new Item(
     "5",
@@ -73,6 +77,7 @@ export const ITEMS: Item[] = [
     false,
     300,
     "Soporte ajustable para laptop hecho de aleación de aluminio.",
+    "Bogotá",
   ),
   new Item(
     "6",
@@ -83,6 +88,7 @@ export const ITEMS: Item[] = [
     true,
     180,
     "Altavoz Bluetooth portátil con batería de 12 horas.",
+    "Medellín",
   ),
   new Item(
     "7",
@@ -93,6 +99,7 @@ export const ITEMS: Item[] = [
     false,
     150,
     "Disco duro externo de 1TB con conectividad USB 3.0.",
+    "Cali",
   ),
   new Item(
     "8",
@@ -103,6 +110,7 @@ export const ITEMS: Item[] = [
     true,
     60,
     "Cámara de acción compacta con grabación 4K y diseño resistente al agua.",
+    "Medellín",
   ),
   new Item(
     "9",
@@ -113,6 +121,7 @@ export const ITEMS: Item[] = [
     true,
     95,
     "Trípode flexible para smartphones para fotografía y grabación de video.",
+    "Bogotá",
   ),
   new Item(
     "10",
@@ -123,6 +132,7 @@ export const ITEMS: Item[] = [
     true,
     110,
     "Auriculares inalámbricos con cancelación activa de ruido y larga duración de batería.",
+    "Medellín",
   ),
   new Item(
     "11",
@@ -133,6 +143,7 @@ export const ITEMS: Item[] = [
     true,
     220,
     "Cargador portátil de 10000mAh para smartphones y tablets.",
+    "Cali",
   ),
   new Item(
     "12",
@@ -143,6 +154,7 @@ export const ITEMS: Item[] = [
     true,
     140,
     "Pulsera de actividad impermeable con monitoreo de ritmo cardíaco y sueño.",
+    "Medellín",
   ),
   new Item(
     "13",
@@ -153,6 +165,7 @@ export const ITEMS: Item[] = [
     false,
     50,
     "Cámara digital compacta con sensor de 20MP y zoom óptico 5x.",
+    "Cali",
   ),
   new Item(
     "14",
@@ -163,6 +176,7 @@ export const ITEMS: Item[] = [
     false,
     180,
     "Lámpara de escritorio LED ajustable con control táctil y opciones de atenuación.",
+    "Bogotá",
   ),
   new Item(
     "15",
@@ -173,6 +187,7 @@ export const ITEMS: Item[] = [
     true,
     80,
     "Casco de realidad virtual inmersivo compatible con PC y consolas de videojuegos.",
+    "Medellín",
   ),
   new Item(
     "16",
@@ -183,6 +198,7 @@ export const ITEMS: Item[] = [
     true,
     90,
     "Monitor LED de 24 pulgadas con resolución Full HD y entrada HDMI.",
+    "Cali",
   ),
   new Item(
     "17",
@@ -193,6 +209,7 @@ export const ITEMS: Item[] = [
     true,
     130,
     "Teclado inalámbrico compacto con batería de larga duración y teclas silenciosas.",
+    "Bogotá",
   ),
   new Item(
     "18",
@@ -203,6 +220,7 @@ export const ITEMS: Item[] = [
     false,
     210,
     "Ratón inalámbrico ergonómico con receptor USB de alta precisión.",
+    "Medellín",
   ),
   new Item(
     "19",
@@ -213,6 +231,7 @@ export const ITEMS: Item[] = [
     true,
     160,
     "Auriculares deportivos resistentes al sudor con sonido de alta calidad.",
+    "Medellín",
   ),
   new Item(
     "20",
@@ -223,6 +242,7 @@ export const ITEMS: Item[] = [
     true,
     70,
     "Proyector portátil con resolución HD y conectividad HDMI y USB.",
+    "Medellín",
   ),
   new Item(
     "21",
@@ -233,6 +253,7 @@ export const ITEMS: Item[] = [
     true,
     110,
     "Cámara web HD con micrófono integrado y enfoque automático.",
+    "Cali",
   ),
   new Item(
     "22",
@@ -243,6 +264,7 @@ export const ITEMS: Item[] = [
     true,
     85,
     "Micrófono de condensador profesional ideal para streaming y grabación.",
+    "Medellín",
   ),
   new Item(
     "23",
@@ -253,6 +275,7 @@ export const ITEMS: Item[] = [
     true,
     140,
     "Tablet de 10 pulgadas con pantalla táctil, almacenamiento de 64GB y Wi-Fi.",
+    "Bogotá",
   ),
   new Item(
     "24",
@@ -263,6 +286,7 @@ export const ITEMS: Item[] = [
     true,
     75,
     "Teclado MIDI con 49 teclas sensibles a la velocidad y conectividad USB.",
+    "Medellín",
   ),
   new Item(
     "25",
@@ -273,6 +297,7 @@ export const ITEMS: Item[] = [
     false,
     60,
     "Altavoces de estantería compactos con sonido nítido y graves profundos.",
+    "Medellín",
   ),
   new Item(
     "26",
@@ -283,6 +308,7 @@ export const ITEMS: Item[] = [
     true,
     90,
     "Router Wi-Fi 6 de alta velocidad con cobertura ampliada y múltiples bandas.",
+    "Medellín",
   ),
   new Item(
     "27",
@@ -293,6 +319,7 @@ export const ITEMS: Item[] = [
     true,
     120,
     "Disco SSD externo de 500GB con conectividad USB-C rápida y portátil.",
+    "Medellín",
   ),
   new Item(
     "28",
@@ -303,6 +330,7 @@ export const ITEMS: Item[] = [
     true,
     80,
     "Cámara instantánea compacta para fotos al instante con diseño retro.",
+    "Cali",
   ),
   new Item(
     "29",
@@ -313,6 +341,7 @@ export const ITEMS: Item[] = [
     true,
     100,
     "Auriculares para gaming con iluminación RGB, micrófono y sonido envolvente.",
+    "Bogotá",
   ),
   new Item(
     "30",
@@ -323,5 +352,6 @@ export const ITEMS: Item[] = [
     false,
     150,
     "Soporte de micrófono ajustable compatible con estudios de grabación y streaming.",
+    "Medellín",
   ),
 ];

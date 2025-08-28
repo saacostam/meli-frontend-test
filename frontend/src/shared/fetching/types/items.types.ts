@@ -11,4 +11,5 @@ export interface Item {
   free_shipping: boolean;
   sold_quantity: number;
   description: string;
+  place: string;
 }

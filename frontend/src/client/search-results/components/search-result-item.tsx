@@ -1,6 +1,6 @@
+import Link from "next/link";
 import { genRoute, RouteType } from "@/client/router";
 import type { Item } from "@/shared/fetching";
-import Link from "next/link";
 
 export interface SearchResultItemProps {
   item: Item;
@@ -29,7 +29,7 @@ export function SearchResultItem({ item }: SearchResultItemProps) {
               {item.price.currency}
             </span>
             <span className="bg-gray-100 w-fit h-fit px-4 py-1 rounded-lg text-sm">
-              {item.condition}
+              {item.place}
             </span>
           </div>
           <h3>{item.title}</h3>

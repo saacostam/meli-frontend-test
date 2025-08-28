@@ -12,5 +12,6 @@ export class Item {
     public readonly free_shipping: boolean,
     public readonly sold_quantity: number,
     public readonly description: string,
+    public readonly place: string,
   ) {}
 }
