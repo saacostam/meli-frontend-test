@@ -1,7 +1,6 @@
 import { Router } from "express"
 import { BaseDomainError, DomainErrorType } from "../../domain/errors";
 import { itemUseCasesService } from "../../infra/di";
-import type { GetItemById, GetItemsBySearchQuery } from "../dtos";
 
 const itemRouter = Router();
 
@@ -20,7 +19,7 @@ itemRouter.get("/", async (req, res) => {
 
   const queryString = String(Array.isArray(rawQueryString) ? rawQueryString[rawQueryString.length - 1] : rawQueryString);
 
-  const response: GetItemsBySearchQuery = await itemUseCasesService.getItemsBySearchQuery({
+  const response = await itemUseCasesService.getItemsBySearchQuery({
     searchQuery: queryString,
   });
   res.status(200).json(response);
@@ -39,7 +38,7 @@ itemRouter.get("/:id", async (req, res) => {
     ]
   )
 
-  const response: GetItemById = await itemUseCasesService.getItemById({
+  const response = await itemUseCasesService.getItemById({
     itemId: id,
   })
   return res.status(200).json(response);

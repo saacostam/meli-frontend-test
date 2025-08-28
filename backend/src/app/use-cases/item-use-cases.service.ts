@@ -1,5 +1,5 @@
 import { BaseDomainError, DomainErrorType } from "../../domain/errors";
-import type { GetItemByIdAppRequestDto, GetItemsBySearchQueryAppRequestDto } from "../dtos";
+import type { GetItemByIdAppRequestDto, GetItemsBySearchQueryAppRequestDto, GetItemsBySearchQueryAppResponseDto } from "../dtos";
 import type { IItemRepository } from "../repositories";
 
 export class ItemsUseCasesService {
@@ -7,8 +7,23 @@ export class ItemsUseCasesService {
     private readonly itemRepository: IItemRepository,
   ){}
 
-  async getItemsBySearchQuery({ searchQuery }: GetItemsBySearchQueryAppRequestDto) {
-    return this.itemRepository.getBySearchQuery(searchQuery);
+  async getItemsBySearchQuery({ searchQuery }: GetItemsBySearchQueryAppRequestDto): Promise<GetItemsBySearchQueryAppResponseDto> {
+    const [
+      categories,
+      items,
+    ] = await Promise.all([
+      this.itemRepository.getCategories(),
+      this.itemRepository.getBySearchQuery(searchQuery),
+    ]);
+
+    return {
+      author: {
+        name: "Santiago",
+        lastname: "Acosta Meza",
+      },
+      categories,
+      items,
+    }
   }
 
   async getItemById({ itemId }: GetItemByIdAppRequestDto) {
