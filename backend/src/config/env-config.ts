@@ -10,7 +10,6 @@ export enum NodeEnv {
 export interface EnvConfig {
   port: number;
   nodeEnv: NodeEnv;
-  meliAcessToken: string;
 }
 
 const rawEnv = process.env.NODE_ENV;
@@ -21,5 +20,4 @@ export const ENV_CONFIG: EnvConfig = {
     rawEnv && Object.values(NodeEnv).find((entry) => entry === rawEnv)
       ? (rawEnv as NodeEnv)
       : NodeEnv.PRODUCTION,
-  meliAcessToken: String(process.env.MELI_ACCESS_TOKEN),
 };
