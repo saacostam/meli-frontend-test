@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { SearchResults } from "@/client/search-results";
 import { getItemsBySearchQuery } from "@/server/fetching";
+
+export const metadata: Metadata = {
+  title: "Mercado Libre | Search",
+  description: "Mercado Libre",
+};
 
 interface Props {
   searchParams: Promise<{ search?: string | string[] }>;
