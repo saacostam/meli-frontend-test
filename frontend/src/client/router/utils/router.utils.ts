@@ -8,5 +8,8 @@ export function genRoute(action: RouteAction): string {
     case RouteType.SEARCH_RESULT: {
       return `/items?search=${action.payload.search}`;
     }
+    case RouteType.ITEM_BY_ID: {
+      return `/items/${action.payload.id}`;
+    }
   }
 }
