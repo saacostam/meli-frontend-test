@@ -24,7 +24,7 @@ export class ItemsUseCasesService {
     return {
       author: AUTHOR,
       categories,
-      items,
+      items: items.splice(0, 4),
     }
   }
 
