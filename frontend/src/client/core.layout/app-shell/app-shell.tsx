@@ -1,13 +1,17 @@
+import Link from "next/link";
 import type { PropsWithChildren } from "react";
 import { Logo } from "@/client/core.components";
+import { genRoute, RouteType } from "@/client/router";
 import { SearchBar } from "@/client/search-bar";
 
 export function AppShell({ children }: PropsWithChildren) {
   return (
     <>
       <div className="bg-primary p-2">
-        <div className="flex max-w-5xl mx-auto gap-6">
-          <Logo width="48" />
+        <div className="flex max-w-5xl mx-auto gap-6 items-center">
+          <Link href={genRoute({ type: RouteType.SEARCH })}>
+            <Logo width="48" />
+          </Link>
           <SearchBar className="flex-1" />
         </div>
       </div>
