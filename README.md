@@ -25,6 +25,7 @@
     Incluye el *search box*. El contenido está mockeado como esqueleto.
   - `/items?search=h` → **Resultados de Búsqueda**
   - `/items/6` → **Vista de Producto**
+    > Nota: dado que la información se encuentra mockeada, el **breadcrumb** no refleja un flujo real de navegación y puede no tener mucho sentido en este estado.
 - Arquitectura/Organización modular:
   - `client` → componentes cliente
   - `server` → componentes servidor
