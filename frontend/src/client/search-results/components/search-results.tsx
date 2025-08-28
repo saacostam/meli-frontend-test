@@ -16,9 +16,9 @@ export function SearchResults({ items, breadCrumbs }: SearchResultsProps) {
 
   return (
     <>
-      <div className="mb-4">
+      {!isEmpty && <div className="mb-4">
         <BreadCrumbs data={breadCrumbs} />
-      </div>
+      </div>}
       <div className="bg-white divide-y divide-gray-200 rounded">
         {isEmpty && (
           <div className="p-4">
