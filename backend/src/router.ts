@@ -4,6 +4,6 @@ import { itemRouter } from "./presentation/routers";
 
 export const mainRouter = Router();
 
-mainRouter.use("/items", itemRouter)
+mainRouter.use("/items", itemRouter);
 
 mainRouter.use(errorHandlerMiddleware);

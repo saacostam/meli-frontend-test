@@ -8,7 +8,7 @@ export interface GetItemsBySearchQueryAppResponseDto {
   author: {
     name: string;
     lastname: string;
-  }
+  };
   categories: string[];
   items: Item[];
 }
@@ -21,7 +21,7 @@ export interface GetItemByIdAppResponseDto {
   author: {
     name: string;
     lastname: string;
-  }
+  };
   categories: string[];
   item: Item;
 }

@@ -1,9 +1,6 @@
 import { Item } from "../../../domain/entities";
 
-export const CATEGORIES: string[] = [
-  "Tecnología",
-  "Electrónica",
-];
+export const CATEGORIES: string[] = ["Tecnología", "Electrónica"];
 
 export const ITEMS: Item[] = [
   new Item(
