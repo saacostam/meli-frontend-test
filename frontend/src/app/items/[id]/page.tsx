@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { getItemById } from "@/server/fetching";
-import NextJsError from "next/error";
 import { ItemByIdView } from "@/client/item-by-id";
 import { notFound } from "next/navigation";
 import { genRoute, RouteType } from "@/client/router";
@@ -20,18 +19,22 @@ export default async function Page({ params }: Props) {
 
   if (!id) return notFound();
 
-  const { categories, item } = await getItemById({
-    id,
-  });
+  try {
+    const { categories, item } = await getItemById({
+      id,
+    });
 
-  return (
-    <ItemByIdView
-      item={item}
-      breadCrumbs={categories.map((category, index, ar) => ({
-        label: category,
-        href:
-          index < ar.length - 1 ? genRoute({ type: RouteType.SEARCH }) : null,
-      }))}
-    />
-  );
+    return (
+      <ItemByIdView
+        item={item}
+        breadCrumbs={categories.map((category, index, ar) => ({
+          label: category,
+          href:
+            index < ar.length - 1 ? genRoute({ type: RouteType.SEARCH }) : null,
+        }))}
+      />
+    );
+  } catch (e) {
+    return notFound();
+  }
 }
