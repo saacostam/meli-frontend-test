@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { PropsWithChildren } from "react";
+import { Suspense, type PropsWithChildren } from "react";
 import { Logo } from "@/client/core.components";
 import { genRoute, RouteType } from "@/client/router";
 import { SearchBar } from "@/client/search-bar";
@@ -12,7 +12,9 @@ export function AppShell({ children }: PropsWithChildren) {
           <Link href={genRoute({ type: RouteType.SEARCH })}>
             <Logo width="48" />
           </Link>
-          <SearchBar className="flex-1" />
+          <Suspense>
+            <SearchBar className="flex-1" />
+          </Suspense>
         </div>
       </div>
       <div className="px-4">
